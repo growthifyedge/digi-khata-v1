@@ -111,6 +111,7 @@ def customers():
             LEFT JOIN payments ON customers.id = payments.customer_id
             WHERE customers.name LIKE ? OR customers.phone LIKE ?
             GROUP BY customers.id
+                ORDER BY customers.id ASC
         """, (f"%{search}%", f"%{search}%"))
     else:
         cursor.execute("""
