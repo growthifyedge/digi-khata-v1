@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Reports Dashboard</h2>
+
+
+    <div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card bg-primary text-white shadow p-3 text-center">
+            <h5>Total Customers</h5>
+            <h2>{{ total_customers }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-success text-white shadow p-3 text-center">
+            <h5>Total Credit</h5>
+            <h2>Rs. {{ total_credit }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-warning shadow p-3 text-center">
+            <h5>Total Paid</h5>
+            <h2>Rs. {{ total_paid }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-danger text-white shadow p-3 text-center">
+            <h5>Outstanding</h5>
+            <h2>Rs. {{ total_outstanding }}</h2>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
