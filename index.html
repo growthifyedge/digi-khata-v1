@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow p-5 text-center mt-5">
+
+    <h1 class="fw-bold">
+        Welcome to Digital Khata
+    </h1>
+
+    <p class="text-muted mt-3">
+        Simple digital ledger system for Pakistani small businesses and shopkeepers.
+    </p>
+
+    <div class="mt-4">
+
+        <a href="/add-customer" class="btn btn-primary me-2">
+            Add Customer
+        </a>
+
+        <a href="/customers" class="btn btn-success me-2">
+            View Customers
+        </a>
+
+        <a href="/reports" class="btn btn-dark">
+            Reports
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
