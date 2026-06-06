@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow p-4">
+
+    <h2 class="mb-4">Edit Customer</h2>
+
+    <form method="POST">
+
+        <div class="mb-3">
+            <label class="form-label">Customer Name</label>
+            <input type="text" name="name" class="form-control" value="{{ customer[1] }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="text" name="phone" class="form-control" value="{{ customer[2] }}">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea name="address" class="form-control" rows="3">{{ customer[3] }}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Opening Balance</label>
+            <input type="number" name="opening_balance" class="form-control" value="{{ customer[4]|int }}">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Notes</label>
+            <textarea name="notes" class="form-control" rows="3">{{ customer[5] }}</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Update Customer</button>
+        <a href="/customers" class="btn btn-secondary">Back</a>
+
+    </form>
+
+</div>
+
+{% endblock %}
